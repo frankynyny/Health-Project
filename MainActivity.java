@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.R.attr.checked;
 import static android.R.attr.name;
 
 public class MainActivity extends AppCompatActivity {
@@ -91,131 +92,136 @@ public class MainActivity extends AppCompatActivity {
         }
     }
         public void onRadioButtonClicked(View view) {
+            //Is this button checked?
+            boolean checked = ((RadioButton) view).isChecked();
+
+
+            switch (view.getId()) {
+                case R.id.noPain:
+                    if (checked) ;
+                    //no pain occured.
+                    healthIndex = healthIndex - 0;
+                    break;
+
+                case R.id.mildPain:
+                    if (checked) ;
+                    //mild pain
+                    healthIndex = healthIndex - 10;
+                    break;
+
+                case R.id.moderatePain:
+                    if (checked) ;
+                    //moderate pain
+                    healthIndex = healthIndex - 15;
+                    break;
+
+                case R.id.severePain:
+                    if (checked) ;
+                    //severe pain
+                    healthIndex = healthIndex - 20;
+                    break;
+
+                case R.id.intensePain:
+                    if (checked) ;
+                    //intense pain
+                    healthIndex = healthIndex - 30;
+                    break;
+
+                case R.id.unbearablePain:
+                    if (checked) ;
+                    //unbearable pain
+                    healthIndex = healthIndex - 40;
+                    break;
+            }
+
+            switch (view.getId()) {
+                case R.id.minutes:
+                    if (checked) ;
+                    //minutes
+                    healthIndex = healthIndex - 10;
+                    break;
+
+                case R.id.hours:
+                    if (checked) ;
+                    //hours
+                    healthIndex = healthIndex - 20;
+                    break;
+
+                case R.id.days:
+                    if (checked) ;
+                    //days
+                    healthIndex = healthIndex - 30;
+                    break;
+
+                case R.id.months:
+                    if (checked) ;
+                    //months
+                    healthIndex = healthIndex - 40;
+                    break;
+            }
+        }
+
+    public void onRadioButtonClicked(View view) {
+        switch (view.getId()) {
         //Is this button checked?
-        boolean checked = ((RadioButton) view).isChecked();
+        boolean check = ((CheckBox) view).isChecked();
 
-
-        switch (view.getId()) {
-            case R.id.noPain:
-                if (checked) ;
-                //no pain occured.
-                healthIndex = healthIndex - 0;
-                break;
-
-            case R.id.mildPain:
-                if (checked) ;
-                //mild pain
-                healthIndex = healthIndex - 10;
-                break;
-
-            case R.id.moderatePain:
-                if (checked) ;
-                //moderate pain
-                healthIndex = healthIndex - 15;
-                break;
-
-            case R.id.severePain:
-                if (checked) ;
-                //severe pain
-                healthIndex = healthIndex - 20;
-                break;
-
-            case R.id.intensePain:
-                if (checked) ;
-                //intense pain
-                healthIndex = healthIndex - 30;
-                break;
-
-            case R.id.unbearablePain:
-                if (checked) ;
-                //unbearable pain
-                healthIndex = healthIndex - 40;
-                break;
-        }
-
-        switch (view.getId()) {
-            case R.id.minutes:
-                if (checked) ;
-                //minutes
-                healthIndex = healthIndex - 10;
-                break;
-
-            case R.id.hours:
-                if (checked) ;
-                //hours
-                healthIndex = healthIndex - 20;
-                break;
-
-            case R.id.days:
-                if (checked) ;
-                //days
-                healthIndex = healthIndex - 30;
-                break;
-
-            case R.id.months:
-                if (checked) ;
-                //months
-                healthIndex = healthIndex - 40;
-                break;
-        }
-
-        switch (view.getId()) {
             case R.id.healthyCondition:
-                if (checked) ;
-                //minutes
-                healthIndex = healthIndex - 10;
+                if (check) ;
+                //hours
+                healthIndex = healthIndex + 20;
                 break;
 
             case R.id.ptsd:
-                if (checked) ;
+                if (check) ;
                 //hours
                 healthIndex = healthIndex - 20;
                 break;
 
             case R.id.depression:
-                if (checked) ;
+                if (check) ;
                 //days
                 healthIndex = healthIndex - 30;
                 break;
 
             case R.id.anxiety:
-                if (checked) ;
+                if (check) ;
                 //months
                 healthIndex = healthIndex - 40;
                 break;
 
             case R.id.hardUpbringing:
-                if (checked) ;
+                if (check) ;
                 //minutes
                 healthIndex = healthIndex - 10;
                 break;
 
             case R.id.normalUpbringing:
-                if (checked) ;
+                if (check) ;
                 //hours
                 healthIndex = healthIndex - 20;
                 break;
 
             case R.id.softUpbringing:
-                if (checked) ;
+                if (check) ;
                 //days
                 healthIndex = healthIndex - 30;
                 break;
 
             case R.id.minorDisability:
-                if (checked) ;
+                if (check) ;
                 //months
                 healthIndex = healthIndex - 40;
                 break;
 
             case R.id.moderateDisability:
-                if (checked) ;
+                if (check) ;
                 //days
                 healthIndex = healthIndex - 30;
                 break;
 
             case R.id.severeDisability:
-                if (checked) ;
+                if (check) ;
                 //months
                 healthIndex = healthIndex - 40;
                 break;
