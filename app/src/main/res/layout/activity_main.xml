@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:inputType="textCapWords" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:text="1. Physical and/or Mental Pain Occured"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/noPain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="No Pain"
+            android:textSize="14dp" />
+        <RadioButton
+            android:id="@+id/mildPain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="Mild Pain"
+            android:textSize="14dp" />
+        <RadioButton
+            android:id="@+id/moderatePain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="Moderate Pain"
+            android:textSize="14dp" />
+        <RadioButton
+            android:id="@+id/severePain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="Severe Pain"
+            android:textSize="14dp"/>
+
+        <RadioButton
+            android:id="@+id/intensePain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="Intense Pain"
+            android:textSize="14dp"/>
+
+        <RadioButton
+            android:id="@+id/unbearablePain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginLeft="40dp"
+            android:text="Unbearable Pain"
+            android:textSize="14dp"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:text="2. Duration of Pain?"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp">
+            <RadioButton
+                android:id="@+id/minutes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Minutes"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="15sp" />
+            <RadioButton
+                android:id="@+id/hours"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Hours"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="15sp" />
+            <RadioButton
+                android:id="@+id/days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Days"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="15sp" />
+            <RadioButton
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Months"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/overallHealth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:text="3. Overall Mental Health Before Pain (0 - 100)?"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/overall_Health_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:hint="Answer"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="4. Personal History?"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp">
+            <CheckBox
+                android:id="@+id/healthyCondition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Healthy Condition"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+            <CheckBox
+                android:id="@+id/ptsd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="PTSD"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+            <CheckBox
+                android:id="@+id/depression"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Depression"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/anxiety"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Anxiety"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp"/>
+
+            <CheckBox
+                android:id="@+id/hardUpbringing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="submitQuiz"
+                android:text="Hard Upbringing"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/normalUpbringing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Normal Upbringing"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp"/>
+
+            <CheckBox
+                android:id="@+id/softUpbringing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Soft Upbringing"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/minorDisability"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onRadioButtonClicked"
+                android:text="Minor Mental/Physical Disability"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/moderateDisability"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="submitQuiz"
+                android:text="Moderate Mental/Physical Disability"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/severeDisability"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="submitQuiz"
+                android:text="Severe Mental/Physical Disability"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="#4CAF50"
+            android:onClick="submitQuiz"
+            android:text="Submit Evaluation"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</ScrollView>
